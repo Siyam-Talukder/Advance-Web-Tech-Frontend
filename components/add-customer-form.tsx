@@ -3,7 +3,7 @@
 import { useState, FormEvent } from "react";
 import { z } from "zod";
 
-// 1. Zod Schema (Faculty Pattern)
+// 1. Zod Schema 
 const customerSchema = z.object({
   fullName: z.string().min(2, "Full Name is required").regex(/^[^0-9]+$/, "Name cannot contain numbers"),
   email: z.string().min(1, "Email is required").email("Invalid email address"),
@@ -13,7 +13,7 @@ const customerSchema = z.object({
 });
 
 export default function AddCustomerForm() {
-  // 2. Manual State for inputs (Faculty Pattern)
+  // 2. Manual State for inputs 
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
