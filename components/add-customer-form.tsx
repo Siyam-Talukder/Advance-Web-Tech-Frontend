@@ -35,6 +35,7 @@ export default function AddCustomerForm() {
     }
 
     setError(""); // Clear errors
+    console.log("Valid Frontend Data Ready for Database:", result.data);
 
     try {
       // 🚨 Change this port number to match your NestJS Backend terminal!
